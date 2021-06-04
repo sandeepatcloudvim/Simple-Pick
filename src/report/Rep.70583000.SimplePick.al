@@ -26,6 +26,14 @@ report 70583000 "Simple Pick Report"
             column(QtyLabel; QtyLabel)
             {
             }
+            column(QtyPicked; QtyPicked)
+            {
+
+            }
+            column(ShelfNoLbl; ShelfNoLbl)
+            {
+
+            }
             column(SalesOrderLabel; SalesOrderLabel)
             {
             }
@@ -81,6 +89,10 @@ report 70583000 "Simple Pick Report"
                 column(QtytoPick_SimplePickLine; "Simple Pick Line"."Qty. to Pick")
                 {
                 }
+                column(Qty_Picked_SimplePickLine; "Simple Pick Line"."Qty. Picked")
+                {
+
+                }
                 column(ItemNo_SimplePickLine; "Simple Pick Line"."Item No.")
                 {
                 }
@@ -90,6 +102,16 @@ report 70583000 "Simple Pick Report"
                 column(LineQuantity_SimplePickLine; "Simple Pick Line"."Line Quantity")
                 {
                 }
+                column(ShelfNo_Item; recItem."Shelf No.")
+                {
+
+                }
+                trigger OnAfterGetRecord()
+                var
+                begin
+                    if recItem.Get("Simple Pick Line"."Item No.") then;
+                end;
+
             }
         }
     }
@@ -122,6 +144,12 @@ report 70583000 "Simple Pick Report"
         FormatAddress.Company(CompanyAddress, CompanyInfo)
     end;
 
+    trigger OnPostReport()
+    begin
+        "Simple Pick Header"."Pick Status" := "Simple Pick Header"."Pick Status"::PRINTED;
+        "Simple Pick Header".Modify(false);
+    end;
+
     var
         CompanyInfo: Record "Company Information";
         FormatAddress: Codeunit "Format Address";
@@ -132,7 +160,10 @@ report 70583000 "Simple Pick Report"
         ItemLable: Label 'Item No.';
         DesLabel: Label 'Description';
         QtyLabel: Label 'Qty to Pick';
+        QtyPicked: Label 'Qty Picked';
+        ShelfNoLbl: Label 'Shelf No.';
         SimpleCaptionLabel: Label 'Simple Pick Report';
         SalesOrderLabel: Label 'Sales Order No.';
+        recItem: Record Item;
 }
 

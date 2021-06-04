@@ -1,6 +1,6 @@
 table 70583000 "Simple Pick Header"
 {
-
+    //Created Simple Pick Header table
     fields
     {
         field(1; "Document No."; Code[20])
@@ -22,8 +22,8 @@ table 70583000 "Simple Pick Header"
         field(5; "Pick Status"; Option)
         {
             DataClassification = ToBeClassified;
-            OptionCaption = 'OPEN,PRINTED,PICKED';
-            OptionMembers = OPEN,PRINTED,PICKED;
+            OptionCaption = 'OPEN,PRINTED,COMPLETED';
+            OptionMembers = OPEN,PRINTED,COMPLETED;
         }
     }
 
@@ -38,5 +38,15 @@ table 70583000 "Simple Pick Header"
     fieldgroups
     {
     }
+    trigger OnDelete()
+    var
+        SimplePickLine: Record "Simple Pick Line";
+    begin
+        SimplePickLine.Reset();
+        SimplePickLine.SetRange("Document No.", "Document No.");
+        SimplePickLine.SetRange("Version No.", "Version No.");
+        if SimplePickLine.FindSet() then
+            SimplePickLine.DeleteAll();
+    end;
 }
 

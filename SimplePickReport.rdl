@@ -40,7 +40,10 @@
                                     <Width>2.65875cm</Width>
                                   </TablixColumn>
                                   <TablixColumn>
-                                    <Width>6.13361cm</Width>
+                                    <Width>5.86089cm</Width>
+                                  </TablixColumn>
+                                  <TablixColumn>
+                                    <Width>2.5cm</Width>
                                   </TablixColumn>
                                   <TablixColumn>
                                     <Width>2.5cm</Width>
@@ -59,7 +62,7 @@
                                               <Paragraph>
                                                 <TextRuns>
                                                   <TextRun>
-                                                    <Value EvaluationMode="Auto" />
+                                                    <Value />
                                                     <Style>
                                                       <FontFamily>Segoe UI</FontFamily>
                                                       <FontSize>9pt</FontSize>
@@ -115,7 +118,7 @@
                                               <Paragraph>
                                                 <TextRuns>
                                                   <TextRun>
-                                                    <Value EvaluationMode="Auto">=First(Fields!ItemLable.Value, "DataSet_Result")</Value>
+                                                    <Value>=First(Fields!ItemLable.Value, "DataSet_Result")</Value>
                                                     <Style>
                                                       <FontFamily>Segoe UI</FontFamily>
                                                       <FontSize>9pt</FontSize>
@@ -171,7 +174,7 @@
                                               <Paragraph>
                                                 <TextRuns>
                                                   <TextRun>
-                                                    <Value EvaluationMode="Auto">=First(Fields!DesLabel.Value, "DataSet_Result")</Value>
+                                                    <Value>=First(Fields!DesLabel.Value, "DataSet_Result")</Value>
                                                     <Style>
                                                       <FontFamily>Segoe UI</FontFamily>
                                                       <FontSize>9pt</FontSize>
@@ -227,7 +230,7 @@
                                               <Paragraph>
                                                 <TextRuns>
                                                   <TextRun>
-                                                    <Value EvaluationMode="Auto">=First(Fields!QtyLabel.Value, "DataSet_Result")</Value>
+                                                    <Value>=First(Fields!QtyLabel.Value, "DataSet_Result")</Value>
                                                     <Style>
                                                       <FontFamily>Segoe UI</FontFamily>
                                                       <FontSize>9pt</FontSize>
@@ -274,6 +277,63 @@
                                           </Textbox>
                                         </CellContents>
                                       </TablixCell>
+                                      <TablixCell>
+                                        <CellContents>
+                                          <Textbox Name="Textbox16">
+                                            <CanGrow>true</CanGrow>
+                                            <KeepTogether>true</KeepTogether>
+                                            <Paragraphs>
+                                              <Paragraph>
+                                                <TextRuns>
+                                                  <TextRun>
+                                                    <Value>=First(Fields!QtyPicked.Value, "DataSet_Result")</Value>
+                                                    <Style>
+                                                      <FontFamily>Segoe UI</FontFamily>
+                                                      <FontSize>9pt</FontSize>
+                                                      <FontWeight>Bold</FontWeight>
+                                                    </Style>
+                                                  </TextRun>
+                                                </TextRuns>
+                                                <Style>
+                                                  <TextAlign>Center</TextAlign>
+                                                </Style>
+                                              </Paragraph>
+                                            </Paragraphs>
+                                            <rd:DefaultName>Textbox16</rd:DefaultName>
+                                            <Style>
+                                              <Border>
+                                                <Style>Solid</Style>
+                                              </Border>
+                                              <TopBorder>
+                                                <Color>Black</Color>
+                                                <Style>Solid</Style>
+                                                <Width>1pt</Width>
+                                              </TopBorder>
+                                              <BottomBorder>
+                                                <Color>Black</Color>
+                                                <Style>Solid</Style>
+                                                <Width>1pt</Width>
+                                              </BottomBorder>
+                                              <LeftBorder>
+                                                <Color>Black</Color>
+                                                <Style>Solid</Style>
+                                                <Width>1pt</Width>
+                                              </LeftBorder>
+                                              <RightBorder>
+                                                <Color>Black</Color>
+                                                <Style>Solid</Style>
+                                                <Width>1pt</Width>
+                                              </RightBorder>
+                                              <BackgroundColor>LightGrey</BackgroundColor>
+                                              <PaddingLeft>2pt</PaddingLeft>
+                                              <PaddingRight>2pt</PaddingRight>
+                                              <PaddingTop>2pt</PaddingTop>
+                                              <PaddingBottom>2pt</PaddingBottom>
+                                            </Style>
+                                          </Textbox>
+                                          <rd:Selected>true</rd:Selected>
+                                        </CellContents>
+                                      </TablixCell>
                                     </TablixCells>
                                   </TablixRow>
                                   <TablixRow>
@@ -288,7 +348,7 @@
                                               <Paragraph>
                                                 <TextRuns>
                                                   <TextRun>
-                                                    <Value EvaluationMode="Auto" />
+                                                    <Value />
                                                     <Style>
                                                       <FontFamily>Segoe UI</FontFamily>
                                                       <FontSize>9pt</FontSize>
@@ -322,7 +382,7 @@
                                               <Paragraph>
                                                 <TextRuns>
                                                   <TextRun>
-                                                    <Value EvaluationMode="Auto">=Fields!ItemNo_SimplePickLine.Value</Value>
+                                                    <Value>=Fields!ItemNo_SimplePickLine.Value</Value>
                                                     <Style>
                                                       <FontFamily>Segoe UI</FontFamily>
                                                       <FontSize>9pt</FontSize>
@@ -356,7 +416,7 @@
                                               <Paragraph>
                                                 <TextRuns>
                                                   <TextRun>
-                                                    <Value EvaluationMode="Auto">=Fields!Description_SimplePickLine.Value</Value>
+                                                    <Value>=Fields!Description_SimplePickLine.Value</Value>
                                                     <Style>
                                                       <FontFamily>Segoe UI</FontFamily>
                                                       <FontSize>9pt</FontSize>
@@ -390,7 +450,7 @@
                                               <Paragraph>
                                                 <TextRuns>
                                                   <TextRun>
-                                                    <Value EvaluationMode="Auto">=Fields!LineQuantity_SimplePickLine.Value</Value>
+                                                    <Value>=Fields!LineQuantity_SimplePickLine.Value</Value>
                                                     <Style>
                                                       <FontFamily>Segoe UI</FontFamily>
                                                       <FontSize>9pt</FontSize>
@@ -420,12 +480,52 @@
                                           </Textbox>
                                         </CellContents>
                                       </TablixCell>
+                                      <TablixCell>
+                                        <CellContents>
+                                          <Textbox Name="Textbox18">
+                                            <CanGrow>true</CanGrow>
+                                            <KeepTogether>true</KeepTogether>
+                                            <Paragraphs>
+                                              <Paragraph>
+                                                <TextRuns>
+                                                  <TextRun>
+                                                    <Value />
+                                                    <Style>
+                                                      <FontFamily>Segoe UI</FontFamily>
+                                                      <FontSize>9pt</FontSize>
+                                                    </Style>
+                                                  </TextRun>
+                                                </TextRuns>
+                                                <Style>
+                                                  <TextAlign>Center</TextAlign>
+                                                </Style>
+                                              </Paragraph>
+                                            </Paragraphs>
+                                            <rd:DefaultName>Textbox18</rd:DefaultName>
+                                            <Style>
+                                              <Border>
+                                                <Style>None</Style>
+                                              </Border>
+                                              <BottomBorder>
+                                                <Color>Black</Color>
+                                                <Style>Solid</Style>
+                                                <Width>1pt</Width>
+                                              </BottomBorder>
+                                              <PaddingLeft>2pt</PaddingLeft>
+                                              <PaddingRight>2pt</PaddingRight>
+                                              <PaddingTop>2pt</PaddingTop>
+                                              <PaddingBottom>2pt</PaddingBottom>
+                                            </Style>
+                                          </Textbox>
+                                        </CellContents>
+                                      </TablixCell>
                                     </TablixCells>
                                   </TablixRow>
                                 </TablixRows>
                               </TablixBody>
                               <TablixColumnHierarchy>
                                 <TablixMembers>
+                                  <TablixMember />
                                   <TablixMember />
                                   <TablixMember />
                                   <TablixMember />
@@ -445,7 +545,7 @@
                               <Top>1.24939cm</Top>
                               <Left>0.22225cm</Left>
                               <Height>1.2cm</Height>
-                              <Width>14.25097cm</Width>
+                              <Width>16.47825cm</Width>
                               <Style>
                                 <Border>
                                   <Style>None</Style>
@@ -478,7 +578,7 @@
                                               <Paragraph>
                                                 <TextRuns>
                                                   <TextRun>
-                                                    <Value EvaluationMode="Auto">=First(Fields!DocLabel.Value, "DataSet_Result")</Value>
+                                                    <Value>=First(Fields!DocLabel.Value, "DataSet_Result")</Value>
                                                     <Style>
                                                       <FontFamily>Segoe UI</FontFamily>
                                                       <FontSize>9pt</FontSize>
@@ -534,7 +634,7 @@
                                               <Paragraph>
                                                 <TextRuns>
                                                   <TextRun>
-                                                    <Value EvaluationMode="Auto">=First(Fields!VersionLabel.Value, "DataSet_Result")</Value>
+                                                    <Value>=First(Fields!VersionLabel.Value, "DataSet_Result")</Value>
                                                     <Style>
                                                       <FontFamily>Segoe UI</FontFamily>
                                                       <FontSize>9pt</FontSize>
@@ -590,7 +690,7 @@
                                               <Paragraph>
                                                 <TextRuns>
                                                   <TextRun>
-                                                    <Value EvaluationMode="Auto">=First(Fields!SalesOrderLabel.Value, "DataSet_Result")</Value>
+                                                    <Value>=First(Fields!SalesOrderLabel.Value, "DataSet_Result")</Value>
                                                     <Style>
                                                       <FontFamily>Segoe UI</FontFamily>
                                                       <FontSize>9pt</FontSize>
@@ -651,7 +751,7 @@
                                               <Paragraph>
                                                 <TextRuns>
                                                   <TextRun>
-                                                    <Value EvaluationMode="Auto">=Fields!DocumentNo_SimplePickHeader.Value</Value>
+                                                    <Value>=Fields!DocumentNo_SimplePickHeader.Value</Value>
                                                     <Style>
                                                       <FontFamily>Segoe UI</FontFamily>
                                                       <FontSize>9pt</FontSize>
@@ -706,7 +806,7 @@
                                               <Paragraph>
                                                 <TextRuns>
                                                   <TextRun>
-                                                    <Value EvaluationMode="Auto">=Fields!VersionNo_SimplePickHeader.Value</Value>
+                                                    <Value>=Fields!VersionNo_SimplePickHeader.Value</Value>
                                                     <Style>
                                                       <FontFamily>Segoe UI</FontFamily>
                                                       <FontSize>9pt</FontSize>
@@ -761,7 +861,7 @@
                                               <Paragraph>
                                                 <TextRuns>
                                                   <TextRun>
-                                                    <Value EvaluationMode="Auto">=Fields!SalesOrderNo_SimplePickHeader.Value</Value>
+                                                    <Value>=Fields!SalesOrderNo_SimplePickHeader.Value</Value>
                                                     <Style>
                                                       <FontFamily>Segoe UI</FontFamily>
                                                       <FontSize>9pt</FontSize>
@@ -891,7 +991,7 @@
         <Height>2.88634cm</Height>
         <Style />
       </Body>
-      <Width>16.80134cm</Width>
+      <Width>16.7005cm</Width>
       <Page>
         <PageHeader>
           <Height>2.8575cm</Height>
@@ -905,7 +1005,7 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value EvaluationMode="Auto">=First(Fields!SimpleCaptionLabel.Value, "DataSet_Result")</Value>
+                      <Value>=First(Fields!SimpleCaptionLabel.Value, "DataSet_Result")</Value>
                       <Style>
                         <FontFamily>Segoe UI</FontFamily>
                         <FontSize>12pt</FontSize>
@@ -934,7 +1034,7 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value EvaluationMode="Auto">=First(Fields!DateTxt.Value, "DataSet_Result")</Value>
+                      <Value>=First(Fields!DateTxt.Value, "DataSet_Result")</Value>
                       <Style>
                         <FontFamily>Segoe UI</FontFamily>
                         <FontSize>8pt</FontSize>
@@ -965,7 +1065,7 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value EvaluationMode="Auto">=First(Fields!CompanyAddress1.Value, "DataSet_Result")</Value>
+                      <Value>=First(Fields!CompanyAddress1.Value, "DataSet_Result")</Value>
                       <Style>
                         <FontFamily>Segoe UI</FontFamily>
                         <FontSize>8pt</FontSize>
@@ -995,7 +1095,7 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value EvaluationMode="Auto">=First(Fields!CompanyAddress2.Value, "DataSet_Result")</Value>
+                      <Value>=First(Fields!CompanyAddress2.Value, "DataSet_Result")</Value>
                       <Style>
                         <FontFamily>Segoe UI</FontFamily>
                         <FontSize>8pt</FontSize>
@@ -1025,7 +1125,7 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value EvaluationMode="Auto">=First(Fields!CompanyAddress3.Value, "DataSet_Result")</Value>
+                      <Value>=First(Fields!CompanyAddress3.Value, "DataSet_Result")</Value>
                       <Style>
                         <FontFamily>Segoe UI</FontFamily>
                         <FontSize>8pt</FontSize>
@@ -1055,7 +1155,7 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value EvaluationMode="Auto">=First(Fields!CompanyAddress4.Value, "DataSet_Result")</Value>
+                      <Value>=First(Fields!CompanyAddress4.Value, "DataSet_Result")</Value>
                       <Style>
                         <FontFamily>Segoe UI</FontFamily>
                         <FontSize>8pt</FontSize>
@@ -1085,7 +1185,7 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value EvaluationMode="Auto">=First(Fields!CompanyAddress5.Value, "DataSet_Result") + "  " + First(Fields!CompanyAddress6.Value, "DataSet_Result")</Value>
+                      <Value>=First(Fields!CompanyAddress5.Value, "DataSet_Result") + "  " + First(Fields!CompanyAddress6.Value, "DataSet_Result")</Value>
                       <Style>
                         <FontFamily>Segoe UI</FontFamily>
                         <FontSize>8pt</FontSize>
@@ -1115,7 +1215,7 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value EvaluationMode="Auto">="Page No. " &amp; "  " &amp; Globals!PageNumber</Value>
+                      <Value>="Page No. " &amp; "  " &amp; Globals!PageNumber</Value>
                       <Style>
                         <FontFamily>Segoe UI</FontFamily>
                         <FontSize>8pt</FontSize>
@@ -1146,7 +1246,7 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value EvaluationMode="Auto">=User!UserID</Value>
+                      <Value>=User!UserID</Value>
                       <Style>
                         <FontFamily>Segoe UI</FontFamily>
                         <FontSize>8pt</FontSize>
@@ -1248,6 +1348,9 @@ End Function
         <Field Name="QtyLabel">
           <DataField>QtyLabel</DataField>
         </Field>
+        <Field Name="QtyPicked">
+          <DataField>QtyPicked</DataField>
+        </Field>
         <Field Name="SalesOrderLabel">
           <DataField>SalesOrderLabel</DataField>
         </Field>
@@ -1301,6 +1404,12 @@ End Function
         </Field>
         <Field Name="QtytoPick_SimplePickLineFormat">
           <DataField>QtytoPick_SimplePickLineFormat</DataField>
+        </Field>
+        <Field Name="Qty_Picked_SimplePickLine">
+          <DataField>Qty_Picked_SimplePickLine</DataField>
+        </Field>
+        <Field Name="Qty_Picked_SimplePickLineFormat">
+          <DataField>Qty_Picked_SimplePickLineFormat</DataField>
         </Field>
         <Field Name="ItemNo_SimplePickLine">
           <DataField>ItemNo_SimplePickLine</DataField>

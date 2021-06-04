@@ -1,5 +1,6 @@
 page 70583002 "Simple Pick Factbox"
 {
+    //Simple Pick Factbox
     PageType = CardPart;
     SourceTable = "Simple Pick Header";
 

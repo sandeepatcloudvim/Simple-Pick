@@ -1,11 +1,15 @@
 pageextension 70583000 Extend_SalesOrder_42 extends "Sales Order"
 {
+    //Extended the Sales Order page
+    // Added "Simple Pick Factbox" page.
     layout
     {
         addafter(Control1906127307)
         {
             part(Control100000567; "Simple Pick Factbox")
             {
+                ApplicationArea = all;
+                Visible = SimplePickEnable;
                 SubPageLink = "Sales Order No." = FIELD("No.");
                 SubPageView = SORTING("Document No.", "Version No.")
                               ORDER(Ascending);
@@ -15,15 +19,17 @@ pageextension 70583000 Extend_SalesOrder_42 extends "Sales Order"
 
     actions
     {
-        addafter(Customer)
+        addafter("Create Inventor&y Put-away/Pick")
         {
+            //Added the action button access to Simple Pick
             action("Simple Pick")
             {
                 ApplicationArea = Basic, Suite;
                 Caption = 'Simple Pick';
                 Image = PickLines;
                 Promoted = true;
-                PromotedCategory = Category12;
+                PromotedCategory = Process;
+                Visible = SimplePickEnable;
 
                 trigger OnAction()
                 begin
@@ -42,6 +48,16 @@ pageextension 70583000 Extend_SalesOrder_42 extends "Sales Order"
         SimplePickHeader: Record "Simple Pick Header";
         SimplePickLine: Record "Simple Pick Line";
         LoopCount: Integer;
+        SimplePickEnable: Boolean;
+        SimplePickSetup: Record "Simple Pick Setup";
+
+    trigger OnOpenPage()
+    var
+    begin
+        if SimplePickSetup.Get() then;
+        if SimplePickSetup."Simple Pick" then
+            SimplePickEnable := true;
+    end;
 
     local procedure InsertSimplePick(recSalesHeader: Record "Sales Header")
     var
